@@ -283,9 +283,24 @@ public class methodf11 {
 
 /// // /// CONVERT NO. FROM BINARY TO DECIMAL. 
 /// ************************************ VVVVVVERY IMP*******************************************************************************
+public static void binTOdec(int binum) {
+    int mynum = binum;
+    int power = 0;
+    int decnum = 0;
+    while(binum>0) {
+        int lastdigit = binum%10;
+        decnum = decnum + (lastdigit*(int)Math.pow(2 , power) );
+        power++;
+        binum = binum/10;
 
+    }
+System.out.println("decimal of "+ mynum +" = "+ decnum);
 
+}
 
+public static void main(String args[]) {
+binTOdec(10101);
+}
 
 
 }
