@@ -283,26 +283,46 @@ public class methodf11 {
 
 /// // /// CONVERT NO. FROM BINARY TO DECIMAL. 
 /// ************************************ VVVVVVERY IMP*******************************************************************************
-public static void binTOdec(int binum) {
-    int mynum = binum;
+// public static void binTOdec(int binum) {
+//     int mynum = binum;
+//     int power = 0;
+//     int decnum = 0;
+//     while(binum>0) {
+//         int lastdigit = binum%10;
+//         decnum = decnum + (lastdigit*(int)Math.pow(2 , power) );
+//         power++;
+//         binum = binum/10;
+
+//     }
+// System.out.println("decimal of "+ mynum +" = "+ decnum);
+
+// }
+
+// public static void main(String args[]) {
+// binTOdec(10101);
+// }
+
+/// // /// CONVERT NO. FROM DECIMAL to BINARY
+
+public static void decTObin(int n) {
+    int mynum = n;
     int power = 0;
-    int decnum = 0;
-    while(binum>0) {
-        int lastdigit = binum%10;
-        decnum = decnum + (lastdigit*(int)Math.pow(2 , power) );
+    int binum = 0;
+    while(n>0) {
+        int rem = n%2;
+        binum = binum + (rem*(int)Math.pow(10 , power));
         power++;
-        binum = binum/10;
+        n = n/2;
 
     }
-System.out.println("decimal of "+ mynum +" = "+ decnum);
-
+    System.out.println("binary of "+ n +" = "+ binum);
 }
 
 public static void main(String args[]) {
-binTOdec(10101);
+decTObin(11);
 }
 
-
+ 
 }
 
 
