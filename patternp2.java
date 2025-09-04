@@ -1,0 +1,118 @@
+import java.util.*;
+public class patternp2 {
+    
+    // /// / /// HOLLOW  RECTANGLE PATTERN;
+    // public static void hollow_rectangle(int totrows , int totcolu ) {
+    //     // outer loop;
+    //     for(int i = 1; i<=totrows;i++) {
+    //         // inner loop - columns;
+    //      // vaisa issa inner loop sa kya hoga ki i ki value fix ho jayagi or j ki value condition ka according 1 to totcolu takk jayagi 
+    //      // thsi is the functioning as hamna i fix kar di or j ko inc as ki 11 ,12, 13, 14, 15 and so more 
+
+    //         for(int j = 1;j<=totcolu;j++) {
+    //             // cell-(i,j) here i represent ki ma konsa row pa hu or uska andar ma konsa columna pa hu vo j represent karaga 
+
+           
+
+    //             if(i == 1 || i == totrows || j == 1 || j == totcolu) {
+    //                 // condition for boundary cells that only true for boundary cells;
+    //                 System.out.print("*");
+
+    //             } else {
+    //             System.out.print(" ");
+    //          }
+    //         }
+    //        /// notice this next line code is written after/outside  the inside loops code;
+    //         System.out.println();
+    //     } 
+     
+    // }    
+    // public static void main(String args[]) {   
+
+    //     hollow_rectangle(8, 8);
+    // }
+
+
+
+
+/// / /// inverted and rotated HALF - PYRAMID
+
+
+
+// public static void inverted_rotated_half_pyramid(int n ) {
+//     for(int i = 1;i<=n;i++) {
+//         // inner loops for space 
+//         for(int j = 1; j<=n-i;j++) {
+//             System.out.print(" ");
+//         }
+//         // inner loop for stars
+//         for(int k = 1; k<=i;k++) {
+//             System.out.print("*");
+
+//         }
+//         System.out.println();
+
+//     }
+// }
+
+
+// public static void main(String args[]) {
+// Scanner sc = new Scanner(System.in); 
+// System.out.println("enter your desired no.");
+// int l = sc.nextInt();
+// inverted_rotated_half_pyramid(l);
+// }
+
+
+
+
+/// / /// // /// /// inverted HALF-PYRAMID c NUMBERS
+
+
+
+// public static void inverted_half_pyramid_withnumbers(int n) {
+//     for(int i= 1;i<=n;i++) {
+//         for(int j= 1;j<=n-i+1;j++) {
+//             System.out.print(j+" ");
+
+//         } System.out.println();
+//     }
+// }
+
+// public static void main (String args[]) {
+//  Scanner sc = new Scanner(System.in); 
+//  System.out.println("enter your desired no.");
+//  int k = sc.nextInt();
+//  inverted_half_pyramid_withnumbers(k);
+// }
+
+
+
+
+
+
+/// / /// /// FLOYD`S TRIANGLE
+
+public static void floyd_triangle(int n ) {
+    int counter = 1;
+    for(int i = 1;i<=n;i++) {
+        // inner - how many times will the counter be printed 
+        for(int j = 1;j<=i;j++) {
+            System.out.print(counter+" ");
+            counter++;
+        }
+        System.out.println(); 
+    }
+  
+}
+
+
+public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+     System.out.println("enter your desired no.");
+ int l = sc.nextInt();
+ floyd_triangle(l);
+
+}
+
+}
