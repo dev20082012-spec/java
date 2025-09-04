@@ -93,26 +93,56 @@ public class patternp2 {
 
 /// / /// /// FLOYD`S TRIANGLE
 
-public static void floyd_triangle(int n ) {
-    int counter = 1;
-    for(int i = 1;i<=n;i++) {
-        // inner - how many times will the counter be printed 
-        for(int j = 1;j<=i;j++) {
-            System.out.print(counter+" ");
-            counter++;
-        }
-        System.out.println(); 
-    }
+// public static void floyd_triangle(int n ) {
+//     int counter = 1;
+//     for(int i = 1;i<=n;i++) {
+//         // inner - how many times will the counter be printed 
+//         for(int j = 1;j<=i;j++) {
+//             System.out.print(counter+" ");
+//             counter++;
+//         }
+//         System.out.println(); 
+//     }
   
+// }
+
+
+// public static void main(String args[]) {
+//     Scanner sc = new Scanner(System.in);
+//      System.out.println("enter your desired no.");
+//  int l = sc.nextInt();
+//  floyd_triangle(l);
+
+// }
+
+
+
+
+
+
+
+/// / /// 0-1 TRIANGLE
+// i = outer loop(ROWS)
+// j inner loop(COLUMNS)
+/// i+j = even = print 1
+/// i+j = odd = print 2
+public static void triangl_01e(int n) {
+    for(int i =1;i<=n;i++) {
+        for(int j = 1;j<=i;j++) {
+          if((i+j)%2==0 ) {
+            System.out.print("1");
+          } else {
+            System.out.print("0");
+          }
+        } System.out.println();
+    }
 }
 
-
 public static void main(String args[]) {
-    Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
      System.out.println("enter your desired no.");
  int l = sc.nextInt();
- floyd_triangle(l);
-
+ triangl_01e(l);
 }
 
 }
