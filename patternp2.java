@@ -313,41 +313,106 @@ public class patternp2 {
 
 
 
-/// / /// // /// DIAMOND PATTERN
+// /// / /// // /// DIAMOND PATTERN
 
-public static void diamond(int n ) {
-    // 1st half loop
-for(int i = 1;i<=n;i++) {
-    for(int j = 1; j<=n-i;j++) {
-        System.out.print(" ");
-    }
-    for(int j=1;j<=(2*i)-1;j++) {
-         System.out.print("*");
-    }
+// public static void diamond(int n ) {
+//     // 1st half loop
+// for(int i = 1;i<=n;i++) {
+//     for(int j = 1; j<=n-i;j++) {
+//         System.out.print(" ");
+//     }
+//     for(int j=1;j<=(2*i)-1;j++) {
+//          System.out.print("*");
+//     }
 
-System.out.println();
+// System.out.println();
 
-}
+// }
 
-// 2nd half loop 
-for(int i = n;i>=1;i--) {
+// // 2nd half loop 
+// for(int i = n;i>=1;i--) {
     
-for(int j = 1; j<=n-i;j++) {
-        System.out.print(" ");
+// for(int j = 1; j<=n-i;j++) {
+//         System.out.print(" ");
+//     }
+//     for(int j=1;j<=(2*i)-1;j++) {
+//          System.out.print("*");
+//     }
+// System.out.println();
+// }
+
+// }
+
+// public static void main(String args[]) {
+//     Scanner sc = new Scanner(System.in);
+//     int l = sc.nextInt();
+//     diamond(l);
+    
+// }
+
+
+
+
+
+
+
+///                                                            nested loop - "BONUS LC"
+
+
+public static void number_pyramid(int n ) {
+    int counter = 1;
+    for(int i = 1;i<=n;i++) {
+        for(int j = 1; j<=n-i;j++) {
+System.out.print(" ");
+        }
+        for(int j = 1;j<=i;j++) {
+            System.out.print(counter + " ");
+           
+        }
+        counter++;
+        System.out.println();
+         
     }
-    for(int j=1;j<=(2*i)-1;j++) {
-         System.out.print("*");
-    }
-System.out.println();
 }
 
+// public static void main(String args[]) {
+//     Scanner sc = new Scanner(System.in);
+//     System.out.print("enter the desired no.");
+//     int l = sc.nextInt();
+//     number_pyramid(l);
+// }
+
+
+
+// palindromic pattern with no.
+
+public static void palindromic(int n ) {
+    for(int i  =1; i<=n;i++) {
+        //sapce
+        for(int j = 1;j<=n-i;j++) {
+            System.out.print(" ");
+        }
+
+        // descending
+
+for(int j = i;j>=1;j--) {
+            System.out.print(j);
+        }
+
+        // ascending
+        for(int j = 2;j<=i;j++) {
+            System.out.print(j);
+
+        } 
+        System.out.println();
+    } 
 }
 
 public static void main(String args[]) {
     Scanner sc = new Scanner(System.in);
+    System.out.print("enter the desired no.");
     int l = sc.nextInt();
-    diamond(l);
-    
+    palindromic(l);
 }
 
 }
