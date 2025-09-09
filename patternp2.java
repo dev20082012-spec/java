@@ -121,28 +121,186 @@ public class patternp2 {
 
 
 
-/// / /// 0-1 TRIANGLE
-// i = outer loop(ROWS)
-// j inner loop(COLUMNS)
-/// i+j = even = print 1
-/// i+j = odd = print 2
-public static void triangl_01e(int n) {
-    for(int i =1;i<=n;i++) {
-        for(int j = 1;j<=i;j++) {
-          if((i+j)%2==0 ) {
-            System.out.print("1");
-          } else {
-            System.out.print("0");
-          }
-        } System.out.println();
-    }
+// /// / /// 0-1 TRIANGLE
+// // i = outer loop(ROWS)
+// // j inner loop(COLUMNS)
+// /// i+j = even = print 1
+// /// i+j = odd = print 2
+// public static void triangl_01e(int n) {
+//     for(int i =1;i<=n;i++) {
+//         for(int j = 1;j<=i;j++) {
+//           if((i+j)%2==0 ) {
+//             System.out.print("1");
+//           } else {
+//             System.out.print("0");
+//           }
+//         } System.out.println();
+//     }
+// }
+
+// public static void main(String args[]) {
+//         Scanner sc = new Scanner(System.in);
+//      System.out.println("enter your desired no.");
+//  int l = sc.nextInt();
+//  triangl_01e(l);
+// }
+
+
+
+
+
+
+
+// /// / /// butterfky pattern to be printed in nested loop;
+
+
+
+
+
+
+
+//  public static void butterfly(int n ) {
+//               //as their is butterfly so at a pt their is must an repetetion pattern;
+//     // 1st half ^
+//   for(int i=1;i<=n;i++) {
+//     // stars - i
+//     for(int s=1;s<=i;s++) {
+//        System.out.print("*");
+
+//     }   
+   
+//     // sapce - 2*(n-i)
+//    for(int g=1;g<=2*(n-i);g++) {
+//    System.out.print(" ");
+//    }
+   
+//     // stars - i
+//    for(int s=1;s<=i;s++) {
+//     System.out.print("*");
+//    }
+     
+// System.out.println();
+
+
+    
+//   }
+
+//  /// 2nd half;
+//  for(int i = n;i>=1;i--) {
+//      for(int s=1;s<=i;s++) {
+//        System.out.print("*");
+
+//     }   
+   
+//     // sapce - 2*(n-i)
+//    for(int g=1;g<=2*(n-i);g++) {
+//    System.out.print(" ");
+//    }
+   
+//     // stars - i
+//    for(int s=1;s<=i;s++) {
+//     System.out.print("*");
+//    }
+//    System.out.println();
+//  }
+
+//  }
+
+
+// public static void main(String args[]) {
+//     Scanner sc = new Scanner(System.in);
+//     int l = sc.nextInt();
+//     butterfly(l);
+    
+// }
+
+
+
+
+
+
+// /// / /// // /// solid rhombus
+// public static void rhombusS(int n ) {
+//     for(int i = 1;i<=n;i++) {
+//         // spaces 
+//         for(int s = 1;s<=(n-i);s++) {
+//             System.out.print(" ");
+
+//         } 
+//         // stars
+//         int k =1;
+//         while(k<=n) {
+           
+//             System.out.print("*");
+//             k++;
+// /// whaṭ mam done here is this 
+// /// for(int j=1;j<=n;j++) {
+// /// System.out.print("*");
+ 
+// /// }
+
+//         }
+// System.out.println();
+//         }
+//     }
+
+
+
+// public static void main(String args[]) {
+//     Scanner sc = new Scanner(System.in);
+//     int l = sc.nextInt();
+//     rhombusS(l);
+    
+// }
+
+
+
+
+
+
+// /// c/ // /// HOLLOW RHOMBUS 
+       
+
+// public static void hollow_rhombus(int n )  {
+//      for(int i =1; i<=n;i++) {
+//         // spaces
+//         for(int j = 1;j<=(n-i);j++) {
+//             System.out.print(" ");
+//         }
+
+//     // hollow rectangle - stars
+//     for(int j = 1;j<=n;j++) {
+//         if( i == 1 || i == n || j == 1 || j == n ) {
+//             System.out.print("*");
+
+//         } else {
+//             System.out.print(" ");
+//         }
+
+//     }
+//               System.out.println();
+
+//      }
+// }
+// public static void main(String args[]) {
+//     Scanner sc = new Scanner(System.in);
+//     int l = sc.nextInt();
+//     hollow_rhombus(l);
+    
+// }
+
+
+
+
+/// / /// // /// DIAMOND PATTERN
+
+public static void diamond(int n ) {
+
 }
 
-public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-     System.out.println("enter your desired no.");
- int l = sc.nextInt();
- triangl_01e(l);
-}
+
 
 }
+
+
+
