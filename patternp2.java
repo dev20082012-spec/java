@@ -1,6 +1,27 @@
 import java.util.*;
 public class patternp2 {
     
+
+
+
+
+
+
+                                         /// most imp  things //
+                                        
+                                         /// nested, loops ma baad vala spaces ko ignore karna hota hai //
+
+
+
+
+
+
+
+
+
+
+
+
     // /// / /// HOLLOW  RECTANGLE PATTERN;
     // public static void hollow_rectangle(int totrows , int totcolu ) {
     //     // outer loop;
@@ -295,10 +316,39 @@ public class patternp2 {
 /// / /// // /// DIAMOND PATTERN
 
 public static void diamond(int n ) {
+    // 1st half loop
+for(int i = 1;i<=n;i++) {
+    for(int j = 1; j<=n-i;j++) {
+        System.out.print(" ");
+    }
+    for(int j=1;j<=(2*i)-1;j++) {
+         System.out.print("*");
+    }
+
+System.out.println();
 
 }
 
+// 2nd half loop 
+for(int i = n;i>=1;i--) {
+    
+for(int j = 1; j<=n-i;j++) {
+        System.out.print(" ");
+    }
+    for(int j=1;j<=(2*i)-1;j++) {
+         System.out.print("*");
+    }
+System.out.println();
+}
 
+}
+
+public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    int l = sc.nextInt();
+    diamond(l);
+    
+}
 
 }
 
