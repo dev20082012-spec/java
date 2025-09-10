@@ -42,31 +42,86 @@ public class arrays {
 
 
                                                               // 4rd lc //
-public static void update(int marks[],int changable) {
-    changable = changable + 5;
-for(int i = 0;i<marks.length;i++) {
-    marks[i] = marks[i] + 1;
-}
-}
+// public static void update(int marks[],int changable) {
+//     changable = changable + 5;
+// for(int i = 0;i<marks.length;i++) {
+//     marks[i] = marks[i] + 1;
+// }
+// }
 
-public static void main(String args[]) {
-    int marks[] = {97,98,94};
-    int changable = 5;
-    update(marks,changable);
-    System.out.println(changable);
-    // instead of writting print marks[0] marks[1] and all this chaos done a """new loop to be written"""
+// public static void main(String args[]) {
+//     int marks[] = {97,98,94};
+//     int changable = 5;
+//     update(marks,changable);
+//     System.out.println(changable);
+//     // instead of writting print marks[0] marks[1] and all this chaos done a """new loop to be written"""
 
-// print our marks
-for(int i = 0;i<marks.length;i++) {
-    System.out.println(marks[i] + " ");
-} System.out.println();
+// // print our marks
+// for(int i = 0;i<marks.length;i++) {
+//     System.out.println(marks[i] + " ");
+// } System.out.println();
 
-/// here the changable not get change {[{[during passing arrays dhayan rakhna hai ki others ki value change nahi hogi]}]}
+// /// here the changable not get change {[{[during passing arrays dhayan rakhna hai ki others ki value change nahi hogi]}]}
  
  
 
-}
+// }
 
 
-}
+
+                                                  /// [[{ lc 6-linear  seearch}]]
+
+// public static int linearsearch(int numbers[],int key) {
+// for(int i = 0;i<numbers.length;i++){
+//     if(numbers[i] == key) {
+//         return 1;
+//     }
+// }
+// return -1;
+// }
+//  public static void main(String args[]) {
+//     int numbers[] = {2,4,6,8,10,12,14,16,18,20};
+//     int key = 40;
+//     int index = linearsearch(numbers,key);
+//     if(index==-1) {
+//         System.out.println("not found = " + index);
+//     } else {
+//         System.out.println("key is at index = " +index);
+//     }
+//  }             
+
+
+
+
+
+                                                  /// [[{ lc 7-largest no.}]]
+
+
+  // public static int getlargest(int numbers[]) {
+// int largest = Integer.MIN_VALUE;  //  -INFINITY;
+// int smallest = Integer.MAX_VALUE;  //  +INFINITY;
+//  for(int i =0;i<numbers.length;i++) {
+//         if(largest<numbers[i]) {
+//             largest=numbers[i];
+// }
+//  if(smallest>numbers[i]) {
+//             smallest=numbers[i];
+// }
+
+//  }
+//  System.out.println("smallest value is : "+smallest);
+//  return largest;
+// // also here can done ki syso(largest) & reutrn 0 ; result will  be same
+// }
+
+//   public static void main(String args[]) {
+//     int numbers[] = {1,2,3,0,6,8,4,20,5,16};
+//    System.out.println("largest value is : "+getlargest(numbers));
+
+
+//         }
+    //***************************************** remember ki initialisation for max and min ka***********************************
+  }                                 
+
+
 
