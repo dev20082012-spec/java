@@ -241,5 +241,35 @@ public class arrays {
 
 
 
+                                /// [[{ lc 13-max. subarrays sum }]]   nested loop to be used
  
+public static void maxsubarray_sum(int number[]) {
+int currsum = 0;
+int maxsum = Integer.MIN_VALUE;
+for(int i =0;i<number.length;i++) {
+  for(int j = i;j<number.length;j++) {
+    currsum = 0;
+    for(int k=i;k<=j;k++) {
+      currsum+=number[k];
+
+    }
+  System.out.print(currsum);
+  if(maxsum<currsum) {
+    maxsum=currsum;
+  }
+
+  
+System.out.println();
+  
+  }
+
+System.out.println();
+}
+System.out.println("MAX SUM = "+maxsum); 
+
+} 
+public static void main(String args[]) {
+  int number[] = {1,-2,46,-1,3};
+  maxsubarray_sum(number);
+}
 }
