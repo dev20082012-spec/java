@@ -161,27 +161,85 @@ public class arrays {
 
 
                                                   /// [[{ lc 10-reverse arrays with in mind  S*C  }]]
- public static void reverse(int numbers[]) {
-    int first = 0, last = numbers.length-1;
-    while(first<last) {
-        // swap
-        int temp = numbers[last]; // temp is an temperary variable
-        numbers[last] = numbers[first];
-        numbers[first] = temp;
 
-        first++;
-        last--;
-    }
- }
-   public static void main(String args[]) {
-    int numbers[] = {2,4,6,8,10};
-     reverse(numbers);
-     for(int i = 0;i<numbers.length;i++) {
-        System.out.print(numbers[i]+" ");
-     }
-System.out.println();
+//  public static void reverse(int numbers[]) {
+//     int first = 0, last = numbers.length-1;
+//     while(first<last) {
+//         // swap
+//         int temp = numbers[last]; // temp is an temperary variable
+//         numbers[last] = numbers[first];
+//         numbers[first] = temp;
 
-}                                 
+//         first++;
+//         last--;
+//     }
+//  }
+//    public static void main(String args[]) {
+//     int numbers[] = {2,4,6,8,10};
+//      reverse(numbers);
+//      for(int i = 0;i<numbers.length;i++) {
+//         System.out.print(numbers[i]+" ");
+//      }
+// System.out.println();
+
+// }                
+
+
+                               /// [[{ lc 11-all possible pairs in an array }]]   nested loop to be used
+                               
+// public static void printpairs(int numbers[]) {
+//    int totalpairs=0;
+// for(int i = 0;i<numbers.length;i++) {
+//    int curre = numbers[i];
+//    for(int j = i+1;j<numbers.length;j++) {
+//       System.out.print("("+curre+","+numbers[j]+")");
+//    totalpairs++;
+//    } System.out.println();
+// } System.out.println("total pairs ="+totalpairs);
+// }
+// public static void main(String args[]) {
+//     int numbers[] = new int[15]; 
+//     numbers[0] = 1;
+//      printpairs(numbers);            
+// }
+// //////////////////
+// ///       imp for interview
+// /// 
+// ///  formula for total pairs in an arrays = n(n-1)/2
+
+
+
+// ***************************************************************************************************mast question*****************************************************************************************************
+                               /// [[{ lc 12-print subarrays }]]   nested loop to be used
+    
+// public static void printsubarrays(int n[]) {
+//    int ts = 0;
+// for(int i = 0;i<n.length;i++) {
+// /// int start = i;
+//    for(int j=i;j<n.length;j++) {
+//      /// int end = j;
+//      for(int k = i;k<=j;k++) {    // print 
+//       System.out.print(n[k]+" ");  // subarray
+//      } 
+//      int sum = 0;
+//      for(int l = i;l<=j;l++) {
+//       sum+=n[l];
+        
+//      }
+//      System.out.println("sum of the subarray "+sum);
+//      ts++;
+//      System.out.println();
+//    } System.out.println();
+// } System.out.println("total subarrays = "+ts);
+// }
+// public static void main(String args[]) {
+//    int n[]={2,4,6,8,10};
+//    printsubarrays(n);
+// }
+
+
+
+
+
+ 
 }
-
-
