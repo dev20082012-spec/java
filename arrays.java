@@ -243,33 +243,91 @@ public class arrays {
 
                                 /// [[{ lc 13-max. subarrays sum }]]   nested loop to be used
  
+// public static void maxsubarray_sum(int number[]) {
+
+// int currsum = 0;
+// int maxsum = Integer.MIN_VALUE;
+// for(int i =0;i<number.length;i++) {
+//   for(int j = i;j<number.length;j++) {
+//     currsum = 0;
+//     for(int k=i;k<=j;k++) {
+//       currsum+=number[k];
+
+//     }
+//   System.out.print(currsum);
+//   if(maxsum<currsum) {
+//     maxsum=currsum;
+//   }
+
+  
+// System.out.println();
+  
+//   }
+
+// System.out.println();
+// }
+// System.out.println("MAX SUM = "+maxsum); 
+
+// } 
+// public static void main(String args[]) {
+//   int number[] = {1,-2,46,-1,3};
+//   maxsubarray_sum(number);
+// }
+
+
+
+
+
+
+                                /// [[{ lc 14-max. subarrays sum (prefix sum array)}]]   nested loop to be used
+                                ///  nearly code same as 13 lc;
+                                // public static void maxsubarray_sum(int number[]) {
+
+
+
 public static void maxsubarray_sum(int number[]) {
 int currsum = 0;
 int maxsum = Integer.MIN_VALUE;
+int prefix[] = new int[number.length];
+
+
+prefix[0] = number[0];
+// as o index ele takk tho sirf uska sum means ki vo hi hai isliya ya nicha vala loop ma 1 sa start hua hai;
+// calculate prefix array;
+for(int i = 1;i<prefix.length;i++) {
+prefix[i] = prefix[i-1] + number[i];
+// iska above ka through hamna phala ek array bana diya jo ki ele ka sum ka equal hai.
+// ab aaga hamm ya uss array ma prefix[] ma index ka help sa uss set ma j-i karanaga and answer jaldi aa jayaga so the time complexcity is less than the above code;
+
+}
+
 for(int i =0;i<number.length;i++) {
   for(int j = i;j<number.length;j++) {
-    currsum = 0;
-    for(int k=i;k<=j;k++) {
-      currsum+=number[k];
+    currsum = i==0 ? prefix[j] : prefix[j]-prefix[i-1];
+    // for(int k=i;k<=j;k++) {
+    //   currsum+=number[k];
 
-    }
-  System.out.print(currsum);
+    // }
+  //System.out.print(currsum);
   if(maxsum<currsum) {
     maxsum=currsum;
   }
-
-  
-System.out.println();
   
   }
 
-System.out.println();
 }
 System.out.println("MAX SUM = "+maxsum); 
 
 } 
 public static void main(String args[]) {
-  int number[] = {1,-2,46,-1,3};
+  int number[] = {1,-2,6,-1,3,6,7,7,45,345,-345,66,4,3};
   maxsubarray_sum(number);
 }
+
+
+
+
+
+
+
 }
