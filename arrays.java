@@ -346,9 +346,23 @@ ms = Math.max(ms,cs);
 System.out.println("our max subarray sum : "+ms);
 }
 
+
+// chatgpt ka updated                         KADANE'S            FOR when all array no. are  *****NEGATIVELY***** 
+public static void negative_KADANES(int number[]) {
+int cs = number[0]; // yha pa initialize kara hai cs ko first ele sa of array
+int ms = Integer.MIN_VALUE; // or here we can also done ms = number[0];
+for(int i = 0;i<number.length;i++) {
+  cs = Math.max(number[i],cs+number[i]);
+ms = Math.max(ms,cs);
+}
+
+System.out.println("our max subarray sum : "+ms);
+
+}
 public static void main(String args[]) {
-  int number[] = {-2,-3,-4,-1,-2,-1,-5,-3};
-maxsubarraysum_KADANES(number);
+  int number[] = {-2,-3,4,-1,-2,1,5,-3};
+//maxsubarraysum_KADANES(number);
+negative_KADANES(number);
 }
 
 
