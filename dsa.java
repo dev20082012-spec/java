@@ -11,7 +11,7 @@ public class dsa {
         int n = height.length;
     /// calculate left max boundary -  array
     int leftmax[] = new int[n];
-    leftmax[0] = height[0]; 
+    leftmax[0] = height[0]; // YHA PA ELE KO INITIALIZE KARNA JARURI HAI BCZ NICHA I+1 MA HAMA I KARNA PARAGA OR DONO COMPARE NAHI HO PAYANGA AS KI DONO KI VALUE SAME HAI AND UP DOWN KA PATA NAHI CHALAGA LEVEL MA
      for(int i = 1;i<n;i++) {
         leftmax[i] = Math.max(height[i],leftmax[i-1]);// yha pa minus 1 bcz pichla vala ka compare karna hai
      }
@@ -19,7 +19,7 @@ public class dsa {
     /// calculate right max boundary - array
     int rightmax[] = new int[n];
     rightmax[n-1] = height[n-1];
-        for(int i = n-2;i>=0;i++) {
+        for(int i = n-2;i>=0;i--) {
             rightmax[i] = Math.max(height[i],rightmax[i+1]);// yha pa plus 1 bcz hamna ulta suru kiya hai so hama ek picha means greater index ka dekhna hai.  
         }
 
