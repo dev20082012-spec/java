@@ -359,11 +359,35 @@ ms = Math.max(ms,cs);
 System.out.println("our max subarray sum : "+ms);
 
 }
-public static void main(String args[]) {
-  int number[] = {-2,-3,4,-1,-2,1,5,-3};
-//maxsubarraysum_KADANES(number);
-negative_KADANES(number);
-}
+// public static void main(String args[]) {
+//   int number[] = {-2,-3,4,-1,-2,1,5,-3};
+// //maxsubarraysum_KADANES(number);
+// negative_KADANES(number);
+// }
 
+
+
+
+
+                                                        /* buy and sell stocks */
+public static int buyANDsellstock(int price[]) {
+  
+int buyPrice = Integer.MAX_VALUE;
+int maxprofit = 0;
+for(int i =0;i<price.length;i++) {
+if(buyPrice<price[i]) {   // profit
+int profit = price[i] - buyPrice;   // today's profit
+maxprofit = Math.max(maxprofit,profit);
+} else {
+  buyPrice = price[i];
+}
+}
+  
+  return maxprofit;
+}
+public static void main(String args[]) {
+  int price[] ={7,1,5,3,6,4};
+System.out.println(buyANDsellstock(price));
+}
 
 }
