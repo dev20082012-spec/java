@@ -49,6 +49,37 @@ public class strings {
         return substr;
 
     }
+
+    public static String toUpperCase(String str) { // lc 13;
+StringBuilder sb = new StringBuilder(""); // this "" means initalize this with empty thing;
+char ch = Character.toUpperCase(str.charAt(0));
+sb.append(ch);
+
+for(int i = 1;i<str.length(); i++) {
+    if(str.charAt(i) == ' ' && i<str.length()-1) {
+        sb.append(str.charAt(i));
+        i++;
+        sb.append(Character.toUpperCase(str.charAt(i)));
+    } else {
+        sb.append(str.charAt(i));
+    }
+} 
+   return sb.toString();
+ }
+ public static String compress(String str) { // lc 14;
+    String newstr = "" ; // initialize with none;
+    for(int i = 0; i<str.length(); i++) {
+        Integer count = 1; // done integer instead of int bcz isa hama baad ma string ma dalna hai jo ki int ka sath possible nahi hai.
+    while(i<str.length()-1 && str.charAt(i) == str.charAt(i+1)) {
+        count++;
+        i++;
+    }
+    newstr += str.charAt(i);
+    if(count>1) {
+newstr += count.toString();
+    }
+    } return newstr;
+ }
     public static void main(String args[]) {
         // char arr[] = {'a','b','c'};
         // String str = "abcd";
@@ -104,8 +135,39 @@ public class strings {
 
                                       // lc 9
 // SUBSTRING.
-String str = "HelloWorld";     
-System.out.println(subString(str, 0, 4));
-System.out.println(str.substring(0,4));                                
-    }
+// String str = "HelloWorld";     
+// System.out.println(subString(str, 0, 4));
+// System.out.println(str.substring(0,4));   
+
+                                      // lc 10 
+// as string for any character use so array can be use data types of string.            
+// String fruits[] = {"apple" , "mango" , "banana" }; // String → is the data type here.
+    // mainly this is an array                       // It means that the array will store string values (text).
+//  String largest = fruits[0]; // hamna phala sa hi largest ARRAY KA 0 index vala ko initialize kar diya.
+//  for(int i = 1;i<fruits.length;i++) {
+//     if(largest.compareTo(fruits[i]) < 0) {
+//         largest = fruits[i];
+//     }
+//  } System.out.println(largest);
+
+
+                                      // lc 12;
+// StringBuilder sb = new StringBuilder("");
+// for(char ch = 'a';ch<='z';ch++) {
+   // sb.append(ch); // append ka matlab ek ka picha ek jorna;
+    // abcdefghijklmnopqrstuvwxyz;
+// O(26=n), bcz loop 26 bar run hua;    
+// } // System.out.println(sb);
+   // System.out.println(sb.length());
+   
+
+                                      // lc 13; question in CODE NATION company;
+// String str = "hi, i am shradha.";     
+// System.out.println(toUpperCase(str)); 
+   
+
+                                      // lc 14;
+String str = "aaaabbbcccccdd";  
+System.out.println(compress(str));                                                                   
+}
 }
