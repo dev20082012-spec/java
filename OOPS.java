@@ -391,13 +391,13 @@ public void eatss() {
 
 
                                                         // lc 22 = STATIC(PROPERTY, FUNCTIONS, BLOCKS, NESTED CLASSES);
-class Student {
-    static int returnpercentage(int maths, int phy, int che) { // ab STATIC lagana sa ya f(x) ek hi barr create hua baar baar create nahi hoga JUST LIKE MAIN FUNCTION IN MAIN CLASS;
-    return (maths + phy + che) / 3; // here f(x) protect code for MULTIPLE CREATION;
-}
-
-    String name;
-    int roll;
+class Student { 
+    static int returnpercentage(int maths, int phy, int che) { / / ab STATIC lagana sa ya f(x) ek hi barr create hua baar baar create nahi hoga JUST LIKE MAIN FUNCTION IN MAIN CLASS;
+    return (maths + phy + che) / 3; // here f(x) protect code fo r MULTIPLE CREATION;
+} 
+ 
+    String name; 
+    int roll; 
 
     static String schoolname;
     void setname(String name) {
